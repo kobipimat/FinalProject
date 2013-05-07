@@ -1,0 +1,33 @@
+﻿*{margin:0px; padding:0px;}
+body
+{
+	height: 600px;
+	width: 900px;
+
+}
+
+.axis path,
+.axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+circle {
+      fill: steelblue;
+      fill-opacity: 0.5;
+    }
+	
+	div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;   /* We'll override this later */
+    background-color: teal;
+	margin-right: 2px;
+}
+
+.style("height", function(d) {
+    var barHeight = d * 5;  //Scale up by factor of 5
+    return barHeight + "px";
+	
+});
